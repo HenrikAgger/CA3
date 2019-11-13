@@ -16,7 +16,6 @@
         <!-- TODO: Change the URL to your own tomcat server. Used to deploy your WAR-file 
         -->
         <remote.server>https://henriksdomainname.dk/manager/text</remote.server>
-        
     </properties>
     
     <dependencies>
