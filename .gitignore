@@ -197,3 +197,4 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/node,java,linux,macos,windows,netbeans
 /rest-jpa-devops-startcode/target/
+/Backend/target/

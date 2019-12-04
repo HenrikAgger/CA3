@@ -23,8 +23,8 @@ import java.util.concurrent.Future;
  * @author Henrik
  */
 public class SwappiFacade {
-    public String getSwappiData(int id) throws MalformedURLException, IOException{
-        URL url = new URL("https://swapi.co/api/people/"+id);
+    public String getSwappiData(int id, String apiurl) throws MalformedURLException, IOException{
+        URL url = new URL(apiurl + id);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         con.setRequestProperty("Accept", "application/json;charset=UTF-8");
@@ -49,7 +49,7 @@ public class SwappiFacade {
                 
                 @Override
                 public String call() throws Exception {
-                    return getSwappiData(count);
+                    return getSwappiData(count, "https://swapi.co/api/people/");
                 }
             }));
             
